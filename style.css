@@ -1,0 +1,89 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.page-title {
+    font-size: 32px;
+    text-align: center;
+}
+
+.main-wrapper {
+    background-color: lightgray;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.tabs {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.tablist {
+    min-width: 20%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-gap: 10px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+.tab-button {
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    cursor: inherit;
+
+    &:focus {
+        outline: 0;
+        background-color: bisque;
+    }
+
+    @media (min-width: 768px) {
+        padding: 5px 5px;
+    }
+}
+
+.tablist li {
+    background-color: aliceblue;
+    border: 1px solid transparent;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &[aria-selected="true"] {
+        background-color: antiquewhite;
+        cursor: auto;
+    }
+}
+
+.tabpanel {
+    width: 100%;
+    background-color:antiquewhite;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 0 5px 5px 0;
+
+    @media (min-width: 768px) {
+        border-radius: 0 0 5px 5px;
+    }
+}
