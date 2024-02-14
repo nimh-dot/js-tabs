@@ -46,28 +46,19 @@ html {
     width: 100%;
     padding: 5px 10px;
     text-align: center;
-    border: none;
+    border-color: transparent;
+    border-radius: 5px 0 0 5px;
     background-color: inherit;
     cursor: inherit;
 
     &:focus {
         outline: 0;
-        background-color: bisque;
     }
 
     @media (min-width: 768px) {
         padding: 5px 5px;
-    }
-}
-
-.tablist li {
-    background-color: aliceblue;
-    border: 1px solid transparent;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-
-    @media (min-width: 768px) {
         border-radius: 5px 5px 0 0;
+
     }
 
     &[aria-selected="true"] {
@@ -76,9 +67,19 @@ html {
     }
 }
 
+.tablist .tablist-item {
+    background-color: aliceblue;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+        border-radius: 5px 5px 0 0;
+    }
+}
+
 .tabpanel {
     width: 100%;
-    background-color:antiquewhite;
+    background-color: antiquewhite;
     text-align: center;
     border: 1px solid transparent;
     border-radius: 0 5px 5px 0;
