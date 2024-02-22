@@ -12,7 +12,7 @@
         <div class="tabs">
             <ul class="tablist" aria-label="Tab switch">
                 <li class="tablist-item">
-                    <button class="tab-button" aria-selected="true" id="tab1">tab-1</button>
+                    <button class="tab-button" aria-selected="true" id="tab1">Prediction</button>
                 </li>
                 <li  class="tablist-item">
                     <button class="tab-button" aria-selected="false" id="tab2">tab-2</button>
@@ -24,8 +24,12 @@
                     <button class="tab-button" aria-selected="false" id="tab4">tab-4</button>
                 </li>
             </ul>
-            <div class="tabpanel" aria-lebe aria-labelledby="tab1">
-                <p>This is the first tab.</p>
+            <div class="tabpanel" aria-labelledby="tab1">
+                <div class="input-wrapper">
+                    <h2>Prediction on Input.</h2>
+                    <input class="input" type="text" placeholder="Input name of the station">
+                    <ul class="predictions"></ul>
+                </div>
             </div>
             <div class="tabpanel" aria-labelledby="tab2" hidden>
                 <p>This is the second tab.</p>
@@ -39,5 +43,6 @@
         </div>
     </div>
     <script src="./tabs.js"></script>
+    <script src="./tfl.js"></script>
 </body>
 </html>

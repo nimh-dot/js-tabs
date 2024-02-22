@@ -88,3 +88,37 @@ html {
         border-radius: 0 0 5px 5px;
     }
 }
+
+.input {
+    display: block;
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 22px;
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid lightgray;
+        border-radius: 5xp 5px;
+    }
+
+    &::placeholder {
+        opacity: .4;
+    }
+}
+
+.predictions {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border-radius: 0 0 5px 5px;
+    background-color: aliceblue;
+}
+
+.station {
+    border-bottom: 1px solid  lightgray;
+}
