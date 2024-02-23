@@ -19,6 +19,7 @@ html {
 }
 
 .tabs {
+    min-height: 360px;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -58,21 +59,28 @@ html {
     @media (min-width: 768px) {
         padding: 5px 5px;
         border-radius: 5px 5px 0 0;
-
     }
 
     &[aria-selected="true"] {
-        background-color: antiquewhite;
         cursor: auto;
     }
 }
 
-.tablist .tablist-item {
+.tablist-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     background-color: aliceblue;
     border-radius: 5px 0 0 5px;
     cursor: pointer;
 
+    &:has([aria-selected="true"]) {
+        background-color: antiquewhite;
+    }
+
     @media (min-width: 768px) {
+        flex-direction: row;
         border-radius: 5px 5px 0 0;
     }
 }
@@ -119,6 +127,6 @@ html {
     background-color: aliceblue;
 }
 
-.station {
+.station:not(:last-child) {
     border-bottom: 1px solid  lightgray;
 }
