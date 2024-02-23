@@ -41,8 +41,6 @@ async function getStations (linesURL, stationsURL) {
             alert(err);
         }
     }
-
-    return stationSet
 }
 
 getStations(linesAPI, stationsAPI)

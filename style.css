@@ -19,7 +19,6 @@ html {
 }
 
 .tabs {
-    min-height: 360px;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -86,7 +85,8 @@ html {
 }
 
 .tabpanel {
-    width: 100%;
+    width:  100%;
+    min-height: 360px;
     background-color: antiquewhite;
     text-align: center;
     border: 1px solid transparent;
@@ -99,13 +99,13 @@ html {
 
 .input {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     border: none;
     border-radius: 5px;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 
     &:focus {
         outline: none;
